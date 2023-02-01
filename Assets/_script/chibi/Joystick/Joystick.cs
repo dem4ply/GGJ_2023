@@ -167,13 +167,13 @@ namespace chibi.joystick
 			control.Player.jump.canceled += on_jump;
 			control.Player.jump.started += on_jump;
 
-			control.Player.spawn_horizontal_platformer.performed += on_horizontal_spawn;
+			/*control.Player.spawn_horizontal_platformer.performed += on_horizontal_spawn;
 			control.Player.spawn_horizontal_platformer.canceled += on_horizontal_spawn;
 			control.Player.spawn_horizontal_platformer.started += on_horizontal_spawn;
 
 			control.Player.spawn_vertical_platformer.performed += on_vertical_spawn;
 			control.Player.spawn_vertical_platformer.canceled += on_vertical_spawn;
-			control.Player.spawn_vertical_platformer.started += on_vertical_spawn;
+			control.Player.spawn_vertical_platformer.started += on_vertical_spawn;*/
 		}
 
 		protected override void _dispose_cache()
@@ -188,13 +188,13 @@ namespace chibi.joystick
 			control.Player.jump.canceled -= on_jump;
 			control.Player.jump.started -= on_jump;
 
-			control.Player.spawn_horizontal_platformer.performed -= on_horizontal_spawn;
+			/*control.Player.spawn_horizontal_platformer.performed -= on_horizontal_spawn;
 			control.Player.spawn_horizontal_platformer.canceled -= on_horizontal_spawn;
 			control.Player.spawn_horizontal_platformer.started -= on_horizontal_spawn;
 
 			control.Player.spawn_vertical_platformer.performed -= on_vertical_spawn;
 			control.Player.spawn_vertical_platformer.canceled -= on_vertical_spawn;
-			control.Player.spawn_vertical_platformer.started -= on_vertical_spawn;
+			control.Player.spawn_vertical_platformer.started -= on_vertical_spawn;*/
 		}
 
 		protected virtual bool check_action_down( string action )
