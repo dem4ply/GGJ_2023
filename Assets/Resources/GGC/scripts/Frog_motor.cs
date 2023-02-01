@@ -46,6 +46,7 @@ namespace GGC.motor
 				debug.draw.arrow( velocity_vector, Color.green, duration:10 );
 				fallback_direction = velocity_vector.normalized;
 			}
+			velocity_vector.x = 0f;
 			return velocity_vector;
 		}
 
