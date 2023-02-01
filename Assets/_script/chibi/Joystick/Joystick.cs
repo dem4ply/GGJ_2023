@@ -148,6 +148,7 @@ namespace chibi.joystick
 		/// </summary>
 		protected override void _init_cache()
 		{
+			base._init_cache();
 			if ( controller == null )
 				controller = GetComponent<Controller>();
 			if ( !desire_direction )
