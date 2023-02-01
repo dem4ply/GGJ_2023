@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using platformer.controller.platform;
 using UnityEngine.InputSystem;
 
-namespace platformer.controller.player
+namespace GGC.controller.player
 {
-	public class Platformer_player_controller : chibi.controller.Controller
+	public class Frog_player_controller : chibi.controller.Controller
 	{
 		public Controller_npc player;
 		public chibi.pomodoro.Pomodoro_obj jump_buffer_time =
