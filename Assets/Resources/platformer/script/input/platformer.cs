@@ -64,24 +64,6 @@ namespace platformer.input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""spawn_horizontal_platformer"",
-                    ""type"": ""Button"",
-                    ""id"": ""2dc95526-f3bf-4f06-95e0-22787fad3506"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""spawn_vertical_platformer"",
-                    ""type"": ""Button"",
-                    ""id"": ""fa8cc12b-58ef-4872-b843-492ddfa573d0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -95,105 +77,6 @@ namespace platformer.input
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""ESDF"",
-                    ""id"": ""00ca640b-d935-4593-8157-c05846ea39b3"",
-                    ""path"": ""Dpad(mode=1)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""e2062cb9-1b15-46a2-838c-2f8d72a0bdd9"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""8180e8bd-4097-4f4e-ab88-4523101a6ce9"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""320bffee-a40b-4347-ac70-c210eb8bc73a"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""1c5327b5-f71c-4f60-99c7-4e737386f1d1"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""d2581a9b-1d11-4566-b27d-b92aff5fabbc"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""2e46982e-44cc-431b-9f0b-c11910bf467a"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""fcfe95b8-67b9-4526-84b5-5d0bc98d6400"",
-                    ""path"": ""<Keyboard>/f"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""77bff152-3580-4b21-b6de-dcd0c7e41164"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -216,6 +99,61 @@ namespace platformer.input
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""7abac924-b5d0-4e31-b63e-3faf7ad7e9a3"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""77ed7a1a-8f88-4e2f-957b-940d6ea22ef6"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""2de8e661-4173-4011-a044-3f828748112f"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""a20212a4-b757-4266-b100-019005ed8f97"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""76968aea-e8ad-4e20-b510-46ef4516170e"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -335,72 +273,6 @@ namespace platformer.input
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9a72561f-377f-4926-99f9-a910b9b821bf"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""spawn_horizontal_platformer"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2afb62a3-30a7-4039-9299-0c095547320b"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""spawn_horizontal_platformer"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d8dc753b-be13-41af-af45-6df9f8543a27"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""spawn_horizontal_platformer"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d371f898-a651-49e8-b6a5-13e32d181c06"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""spawn_vertical_platformer"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2ca3c750-062a-431a-b688-bdf01d3cfa5a"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""spawn_vertical_platformer"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""880d6f7f-e93a-459c-ab21-9cb0c76328f5"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""spawn_vertical_platformer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -992,8 +864,6 @@ namespace platformer.input
             m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
             m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
             m_Player_jump = m_Player.FindAction("jump", throwIfNotFound: true);
-            m_Player_spawn_horizontal_platformer = m_Player.FindAction("spawn_horizontal_platformer", throwIfNotFound: true);
-            m_Player_spawn_vertical_platformer = m_Player.FindAction("spawn_vertical_platformer", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1069,8 +939,6 @@ namespace platformer.input
         private readonly InputAction m_Player_Look;
         private readonly InputAction m_Player_Fire;
         private readonly InputAction m_Player_jump;
-        private readonly InputAction m_Player_spawn_horizontal_platformer;
-        private readonly InputAction m_Player_spawn_vertical_platformer;
         public struct PlayerActions
         {
             private @Platformer m_Wrapper;
@@ -1079,8 +947,6 @@ namespace platformer.input
             public InputAction @Look => m_Wrapper.m_Player_Look;
             public InputAction @Fire => m_Wrapper.m_Player_Fire;
             public InputAction @jump => m_Wrapper.m_Player_jump;
-            public InputAction @spawn_horizontal_platformer => m_Wrapper.m_Player_spawn_horizontal_platformer;
-            public InputAction @spawn_vertical_platformer => m_Wrapper.m_Player_spawn_vertical_platformer;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -1102,12 +968,6 @@ namespace platformer.input
                     @jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                     @jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                     @jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                    @spawn_horizontal_platformer.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn_horizontal_platformer;
-                    @spawn_horizontal_platformer.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn_horizontal_platformer;
-                    @spawn_horizontal_platformer.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn_horizontal_platformer;
-                    @spawn_vertical_platformer.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn_vertical_platformer;
-                    @spawn_vertical_platformer.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn_vertical_platformer;
-                    @spawn_vertical_platformer.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpawn_vertical_platformer;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -1124,12 +984,6 @@ namespace platformer.input
                     @jump.started += instance.OnJump;
                     @jump.performed += instance.OnJump;
                     @jump.canceled += instance.OnJump;
-                    @spawn_horizontal_platformer.started += instance.OnSpawn_horizontal_platformer;
-                    @spawn_horizontal_platformer.performed += instance.OnSpawn_horizontal_platformer;
-                    @spawn_horizontal_platformer.canceled += instance.OnSpawn_horizontal_platformer;
-                    @spawn_vertical_platformer.started += instance.OnSpawn_vertical_platformer;
-                    @spawn_vertical_platformer.performed += instance.OnSpawn_vertical_platformer;
-                    @spawn_vertical_platformer.canceled += instance.OnSpawn_vertical_platformer;
                 }
             }
         }
@@ -1290,8 +1144,6 @@ namespace platformer.input
             void OnLook(InputAction.CallbackContext context);
             void OnFire(InputAction.CallbackContext context);
             void OnJump(InputAction.CallbackContext context);
-            void OnSpawn_horizontal_platformer(InputAction.CallbackContext context);
-            void OnSpawn_vertical_platformer(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {
