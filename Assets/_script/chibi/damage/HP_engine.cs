@@ -11,7 +11,9 @@ namespace chibi.damage
 			public chibi.tool.reference.Stat_reference stat;
 
 			public delegate void on_died_delegate();
+			public delegate void on_take_damage_delegate( int amount, Vector3 fall_back_direction );
 			public event on_died_delegate on_died;
+			public event on_take_damage_delegate on_take_damage;
 
 			public virtual bool is_dead
 			{
@@ -25,7 +27,10 @@ namespace chibi.damage
 				if ( helper.consts.tags.damage == other.tag )
 				{
 					Damage damage = other.GetComponent<Damage>();
-					proccess_damage( damage );
+					debug.draw.sphere( other.transform.position, Color.red, 0.1f, duration:10f );
+					Vector3 fall_back_direction = transform.position - other.transform.position;
+					debug.draw.arrow( fall_back_direction, Color.blue, duration: 10f );
+					proccess_damage( damage, fall_back_direction );
 				}
 			}
 
@@ -34,7 +39,9 @@ namespace chibi.damage
 				if ( helper.consts.tags.damage == collision.gameObject.tag )
 				{
 					Damage damage = collision.gameObject.GetComponent<Damage>();
-					proccess_damage( damage );
+					debug.draw.sphere( collision.transform.position, Color.red, 0.1f, 10f );
+					Vector3 fall_back_direction = transform.position - collision.transform.position;
+					proccess_damage( damage, fall_back_direction );
 				}
 			}
 
@@ -67,7 +74,7 @@ namespace chibi.damage
 				return false;
 			}
 
-			protected virtual void proccess_damage( Damage damage )
+			protected virtual void proccess_damage( Damage damage, Vector3 fall_back_direction )
 			{
 				if ( damage == null )
 				{
@@ -77,11 +84,16 @@ namespace chibi.damage
 				}
 				if ( is_my_damage( damage ) )
 					return;
-				take_damage( damage );
+				take_damage( damage, fall_back_direction );
 			}
 
-			public virtual void take_damage( Damage damage )
+			public virtual void take_damage( Damage damage, Vector3 fall_back_direction )
 			{
+				if ( on_take_damage != null )
+				{
+					debug.log( "danno con fallback enviado al evento" );
+					on_take_damage( (int)damage.amount, fall_back_direction );
+				}
 				take_damage( damage.damage, (int)damage.amount, damage.owner );
 			}
 
