@@ -49,14 +49,12 @@ namespace chibi.joystick
 		}
 		public void on_horizontal_spawn( InputAction.CallbackContext context )
 		{
-			debug.log( "horizontal" );
 			if ( context.started )
 				controller.action( "p1__bumper__left", chibi.joystick.events.down );
 		}
 
 		public void on_vertical_spawn( InputAction.CallbackContext context )
 		{
-			debug.log( "vertical" );
 			if ( context.started )
 				controller.action( "p1__trigger__right", chibi.joystick.events.down );
 		}
@@ -65,12 +63,10 @@ namespace chibi.joystick
 		{
 			if ( context.started )
 			{
-				debug.log( "jump" );
 				controller.action( "jump", chibi.joystick.events.down );
 			}
 			else if ( context.canceled )
 			{
-				debug.log( "cancel jump" );
 				controller.action( "jump", chibi.joystick.events.up );
 			}
 		}
@@ -79,12 +75,10 @@ namespace chibi.joystick
 		{
 			if ( context.started )
 			{
-				debug.log( "fire" );
 				controller.action( "fire", chibi.joystick.events.down );
 			}
 			else if ( context.canceled )
 			{
-				debug.log( "cancel fire" );
 				controller.action( "fire", chibi.joystick.events.up );
 			}
 		}

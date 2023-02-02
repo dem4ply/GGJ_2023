@@ -102,7 +102,6 @@ namespace GGC.motor
 			{
 				animator.is_attacking = true;
 				__is_attacking = is_attacking_coroutine();
-				debug.log( "iniciando el ataque" );
 				StartCoroutine( __is_attacking );
 			}
 		}
