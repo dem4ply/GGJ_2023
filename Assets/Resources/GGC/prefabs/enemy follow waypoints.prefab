@@ -68,7 +68,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemy follow waypoints
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6013289635738877103, guid: d3d630510af3e54409fa948bd58ee88e, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d3d630510af3e54409fa948bd58ee88e, type: 3}
 --- !u!1 &3499229840829048357 stripped
@@ -96,6 +97,54 @@ MonoBehaviour:
   behaviors:
   - {fileID: 11400000, guid: 6b0e2bb0dc6ae894abfa6df3b7e876e7, type: 2}
   start_speed: -1
+--- !u!114 &2894867027192618278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3499229840829048357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b1eba69869a4b448113d61569a9f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug_mode: 0
+  pool: {fileID: 0}
+  current_speed: {x: 0, y: 0, z: 0}
+  max_speed: 4
+  is_steering: 0
+  steering_mass: 1
+  velocity_acceleration: {x: 0, y: 0, z: 0}
+  manager_collision: {fileID: 0}
+  animator: {fileID: 0}
+  max_slope_anlge: 45
+  _max_jump_heigh: 4
+  _min_jump_heigh: 1
+  _wall_climp_jump_heigh: 3
+  _jump_time: 0.4
+  _falling_time: 0.4
+  _gravity_when_fall: -10
+  _jump_time_wall_climp: 0.4
+  climp_wall_jump_ignore_input: 1
+  wall_jump_off_ignore_input: 1
+  grabity_after_wall_jump_climp: -10
+  slope_gravity: -10
+  multiplier_velocity_wall_slice: 0.8
+  multiplier_velocity_climp_jump: 0.8
+  wall_jump_climp: {x: 0, y: 14, z: 14}
+  wall_jump_off: {x: 0, y: 5, z: 8}
+  wall_jump_leap: {x: 0, y: 20, z: 14}
+  time_to_reach_speed_in_ground: 0.1
+  time_to_reach_speed_in_air: 0.2
+  current_direction: 0
+  hp_motor: {fileID: 0}
+  fallback_time: 0.1
+  is_fallbacking: 0
+  fallback_direction: {x: 0, y: 0, z: 0}
+  fallback_force: 3
+  attack_time: 0.5
+  explotion_prefab: {fileID: 0}
 --- !u!114 &6803962055250132643 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4436110919812293675, guid: d3d630510af3e54409fa948bd58ee88e,

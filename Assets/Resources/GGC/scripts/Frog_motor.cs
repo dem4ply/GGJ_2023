@@ -14,6 +14,9 @@ namespace GGC.motor
 		public float fallback_force = 3;
 		protected IEnumerator __fallbacking_coroutine;
 
+		public float attack_time = 0.5f;
+		protected IEnumerator __is_attacking;
+
 		public GameObject explotion_prefab;
 
 		public override Vector3 desire_velocity
@@ -33,6 +36,12 @@ namespace GGC.motor
 			yield return new WaitForSeconds( fallback_time );
 			is_fallbacking = false;
 			fallback_direction = Vector3.zero;
+		}
+
+		protected virtual IEnumerator is_attacking_coroutine()
+		{
+			yield return new WaitForSeconds( attack_time );
+			animator.is_attacking = false;
 		}
 
 		public override Vector3 process_motion( ref Vector3 velocity_vector )
@@ -85,6 +94,17 @@ namespace GGC.motor
 			is_fallbacking = true;
 			__fallbacking_coroutine = fallbacking_coroutine();
 			StartCoroutine( __fallbacking_coroutine );
+		}
+
+		public virtual void on_attack()
+		{
+			if ( !animator.is_attacking )
+			{
+				animator.is_attacking = true;
+				__is_attacking = is_attacking_coroutine();
+				debug.log( "iniciando el ataque" );
+				StartCoroutine( __is_attacking );
+			}
 		}
 	}
 }

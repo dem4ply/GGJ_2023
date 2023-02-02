@@ -75,6 +75,20 @@ namespace chibi.joystick
 			}
 		}
 
+		public void on_fire( InputAction.CallbackContext context )
+		{
+			if ( context.started )
+			{
+				debug.log( "fire" );
+				controller.action( "fire", chibi.joystick.events.down );
+			}
+			else if ( context.canceled )
+			{
+				debug.log( "cancel fire" );
+				controller.action( "fire", chibi.joystick.events.up );
+			}
+		}
+
 		#region funciones protegdas
 		protected void Update()
 		{
@@ -168,6 +182,10 @@ namespace chibi.joystick
 			control.Player.jump.canceled += on_jump;
 			control.Player.jump.started += on_jump;
 
+			control.Player.Fire.performed += on_fire;
+			control.Player.Fire.canceled += on_fire;
+			control.Player.Fire.started += on_fire;
+
 			/*control.Player.spawn_horizontal_platformer.performed += on_horizontal_spawn;
 			control.Player.spawn_horizontal_platformer.canceled += on_horizontal_spawn;
 			control.Player.spawn_horizontal_platformer.started += on_horizontal_spawn;
@@ -188,6 +206,10 @@ namespace chibi.joystick
 			control.Player.jump.performed -= on_jump;
 			control.Player.jump.canceled -= on_jump;
 			control.Player.jump.started -= on_jump;
+
+			control.Player.Fire.performed -= on_fire;
+			control.Player.Fire.canceled -= on_fire;
+			control.Player.Fire.started -= on_fire;
 
 			/*control.Player.spawn_horizontal_platformer.performed -= on_horizontal_spawn;
 			control.Player.spawn_horizontal_platformer.canceled -= on_horizontal_spawn;

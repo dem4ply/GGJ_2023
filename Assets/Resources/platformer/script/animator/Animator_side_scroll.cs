@@ -28,6 +28,11 @@ namespace chibi.animator
 			get { return animator.GetBool( "is_walled" ); }
 			set { animator.SetBool ( "is_walled", value ); }
 		}
+		public bool is_attacking
+		{
+			get { return animator.GetBool( "is_attacking" ); }
+			set { animator.SetBool ( "is_attacking", value ); }
+		}
 
 		public Vector3 direction
 		{

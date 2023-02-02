@@ -221,6 +221,17 @@
                 },
                 {
                     "name": "",
+                    "id": "2766085e-98de-4902-bc4e-732c54ce2dea",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "01ad7bb7-0dd3-4e3a-b7ca-956fd081450c",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",

@@ -103,10 +103,13 @@ namespace GGC.controller.player
 		{
 			switch ( name )
 			{
-				case "fire1":
+				case "fire":
 					switch ( e )
 					{
 						case chibi.joystick.events.down:
+							debug.log( "atacar" );
+							motor.Frog_motor motor = (motor.Frog_motor)player.motor;
+							motor.on_attack();
 							break;
 						case chibi.joystick.events.up:
 							break;
@@ -131,7 +134,7 @@ namespace GGC.controller.player
 			base.action( name, e );
 			switch ( name )
 			{
-				case "fire1":
+				case "fire":
 					action( name, e, true );
 					break;
 				case "jump":
