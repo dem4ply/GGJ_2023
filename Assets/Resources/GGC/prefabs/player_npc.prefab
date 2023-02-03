@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 8175754491918550858}
   m_Layer: 0
   m_Name: player_npc
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
   start_buffos: []
   hp:
     use_constant: 1
-    _current: 30
-    _max: 30
+    _current: 1
+    _max: 1
     variable: {fileID: 0}
   attributes:
     strength: 10
