@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using danmaku.controller.player;
 using danmaku.controller.npc;
 using chibi.damage.motor;
+using Cinemachine;
 
 namespace GGC.game_manager
 {
@@ -13,6 +14,7 @@ namespace GGC.game_manager
 		[ Header( "joystick" ) ]
 		public chibi.joystick.Joystick joystick;
 		public GGC.controller.player.Frog_player_controller player_controller;
+		public CinemachineVirtualCamera main_camera;
 
 		[ Header( "player" ) ]
 		public int lives;
@@ -35,6 +37,9 @@ namespace GGC.game_manager
 			if ( !player_controller )
 				debug.error( "no esta asignado el player controller" );
 
+			if ( !main_camera )
+				debug.error( "no esta asignado la camara" );
+
 			//instance_player();
 			if ( player_reference.Value )
 			{
@@ -50,6 +55,8 @@ namespace GGC.game_manager
 			hp.on_died += on_player_died;
 			player_controller.enabled = true;
 			joystick.enabled = true;
+			main_camera.Follow = player_controller.player.transform;
+			main_camera.LookAt = player_controller.player.transform;
 		}
 
 		protected void instance_player()
