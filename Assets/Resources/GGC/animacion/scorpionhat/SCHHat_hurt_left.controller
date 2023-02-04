@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: scorpion_hat_hurt
+  m_Name: scorpion_hat_hurt_left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 78fb21a81844090478394dfc2bfe47fd, type: 2}
+  m_Motion: {fileID: 7400000, guid: 642681ac88c595a4fa629e00d81d373c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

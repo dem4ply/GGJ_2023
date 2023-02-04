@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: scorpion_hat_dead
+  m_Name: scorpion_hat_dead_left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 70f02dff2fffce64eb522484c349a755, type: 2}
+  m_Motion: {fileID: 7400000, guid: d9e76199ed9e0634c8d1bb190cd68bda, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
