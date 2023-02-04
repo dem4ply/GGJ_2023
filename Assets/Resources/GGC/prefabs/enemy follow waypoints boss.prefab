@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 6013289635738877089, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6013289635738877089, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
@@ -76,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 6013289635738877101, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
       propertyPath: m_Name
-      value: enemy follow waypoints
+      value: enemy follow waypoints boss
       objectReference: {fileID: 0}
     - target: {fileID: 8851280505819215359, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
@@ -144,7 +144,8 @@ MonoBehaviour:
   fallback_direction: {x: 0, y: 0, z: 0}
   fallback_force: 3
   attack_time: 0.5
-  explotion_prefab: {fileID: 0}
+  explotion_prefab: {fileID: 1583176076175549028, guid: 61c9c0f4c5d50994d840fb4672df5ef6,
+    type: 3}
 --- !u!114 &8029995165221366220
 MonoBehaviour:
   m_ObjectHideFlags: 0
