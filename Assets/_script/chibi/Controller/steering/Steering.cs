@@ -61,6 +61,8 @@ namespace chibi.controller.steering
 
 			for ( int i = 0; i < behaviors_properties.Count; ++i )
 			{
+				if ( !target )
+					continue;
 				properties = behaviors_properties[i];
 				behavior = behaviors[i];
 				properties.time += Time.deltaTime;

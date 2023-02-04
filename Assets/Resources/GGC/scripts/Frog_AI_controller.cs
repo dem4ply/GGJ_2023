@@ -21,6 +21,9 @@ namespace GGC.controller.player
 		public Transform waypoint_patrol;
 
 		protected chibi.controller.steering.Steering steering;
+		public float attack_distance = 10f;
+
+		public GameObject player_global;
 
 		protected override void _init_cache()
 		{
@@ -28,6 +31,21 @@ namespace GGC.controller.player
 			if ( !npc )
 				debug.error( "no esta asignado el npc controller ai" );
 			get_sterring();
+		}
+
+		private void Update()
+		{
+			if ( player_global )
+			{
+				debug.draw.arrow_to( player_global.transform.position, Color.black );
+				float distance = Vector3.Distance( player_global.transform.position, npc.transform.position );
+				if ( distance <= attack_distance )
+				{
+					debug.draw.arrow_to( player_global.transform.position, Color.red );
+					motor.Frog_motor motor = (motor.Frog_motor)npc.motor;
+					motor.on_attack();
+				}
+			}
 		}
 
 		protected void get_sterring()
@@ -63,6 +81,7 @@ namespace GGC.controller.player
 			if ( other.tag == helper.consts.tags.player )
 			{
 				set_seek_player( other.gameObject.transform );
+				player_global = other.gameObject;
 			}
 		}
 
@@ -71,6 +90,7 @@ namespace GGC.controller.player
 			if ( other.tag == helper.consts.tags.player )
 			{
 				set_follow_waypoint();
+				player_global = null;
 			}
 		}
 
@@ -79,6 +99,7 @@ namespace GGC.controller.player
 			if ( collision.gameObject.tag == helper.consts.tags.player )
 			{
 				set_seek_player( collision.transform );
+				player_global = collision.gameObject;
 			}
 		}
 
@@ -87,6 +108,7 @@ namespace GGC.controller.player
 			if ( collision.gameObject.tag == helper.consts.tags.player )
 			{
 				set_follow_waypoint();
+				player_global = null;
 			}
 		}
 	}
