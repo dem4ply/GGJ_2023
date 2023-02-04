@@ -18,6 +18,15 @@ namespace chibi.animator
 				debug.error( "no se encontro el componente animator" );
 			}
 		}
+
+		public void change_layer( int layer, float weight )
+		{
+			for ( int i = 0; i < animator.layerCount; ++i )
+			{
+				animator.SetLayerWeight( i, 0f );
+			}
+			animator.SetLayerWeight( layer, weight );
+		}
 		#endregion
 	}
 }
