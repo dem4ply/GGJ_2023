@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 6013289635738877089, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6013289635738877089, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
@@ -112,7 +112,7 @@ MonoBehaviour:
   debug_mode: 0
   pool: {fileID: 0}
   current_speed: {x: 0, y: 0, z: 0}
-  max_speed: 4
+  max_speed: 10
   is_steering: 0
   steering_mass: 1
   velocity_acceleration: {x: 0, y: 0, z: 0}
