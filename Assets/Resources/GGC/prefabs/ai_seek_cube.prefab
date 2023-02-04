@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4375772859172426247
 MeshFilter:
@@ -115,3 +115,5 @@ MonoBehaviour:
   is_block: 0
   npc: {fileID: 0}
   waypoint_patrol: {fileID: 0}
+  attack_distance: 10
+  player_global: {fileID: 0}
