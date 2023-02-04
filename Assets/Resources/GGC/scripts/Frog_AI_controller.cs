@@ -50,6 +50,8 @@ namespace GGC.controller.player
 
 		protected void get_sterring()
 		{
+			if ( !npc )
+				return;
 			steering = npc.GetComponent<Steering>();
 			if ( !steering )
 				steering = npc.gameObject.AddComponent<Steering>();
@@ -57,6 +59,8 @@ namespace GGC.controller.player
 
 		protected void set_follow_waypoint()
 		{
+			if ( !npc )
+				return;
 			steering.target = waypoint_patrol;
 			steering.controller = npc;
 			var behavior = Follow_waypoints_child_transforms.CreateInstance<Follow_waypoints_child_transforms>();
@@ -68,6 +72,8 @@ namespace GGC.controller.player
 
 		protected void set_seek_player( Transform player )
 		{
+			if ( !npc )
+				return;
 			steering.target = player;
 			steering.controller = npc;
 			var behavior = Seek.CreateInstance<Seek>();
@@ -78,6 +84,8 @@ namespace GGC.controller.player
 
 		private void OnTriggerEnter( Collider other )
 		{
+			if ( !npc )
+				return;
 			if ( other.tag == helper.consts.tags.player )
 			{
 				set_seek_player( other.gameObject.transform );
@@ -87,6 +95,8 @@ namespace GGC.controller.player
 
 		private void OnTriggerExit( Collider other )
 		{
+			if ( !npc )
+				return;
 			if ( other.tag == helper.consts.tags.player )
 			{
 				set_follow_waypoint();
@@ -96,6 +106,8 @@ namespace GGC.controller.player
 
 		private void OnCollisionEnter( Collision collision )
 		{
+			if ( !npc )
+				return;
 			if ( collision.gameObject.tag == helper.consts.tags.player )
 			{
 				set_seek_player( collision.transform );
@@ -105,6 +117,8 @@ namespace GGC.controller.player
 
 		private void OnCollisionExit( Collision collision )
 		{
+			if ( !npc )
+				return;
 			if ( collision.gameObject.tag == helper.consts.tags.player )
 			{
 				set_follow_waypoint();
