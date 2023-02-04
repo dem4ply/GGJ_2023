@@ -28,7 +28,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack_01
+  m_Name: FH_attack
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -64,7 +64,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2c74c2d14b66c9d4ab56fd9e4e20343a, type: 2}
+  m_Motion: {fileID: 7400000, guid: daeb7245da301e740a248ce201c71771, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
