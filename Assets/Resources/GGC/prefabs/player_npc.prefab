@@ -311,11 +311,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: froggy
       objectReference: {fileID: 0}
+    - target: {fileID: 1791635596790418603, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791635596790418603, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791635596790418603, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3522044623162307290, guid: b5527e2221c9f41498e8200fea97c027,
         type: 3}
       propertyPath: owner
       value: 
       objectReference: {fileID: 4837309434160766087}
+    - target: {fileID: 3522044623162307290, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: debug_mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3983630890646107512, guid: b5527e2221c9f41498e8200fea97c027,
         type: 3}
       propertyPath: m_RootOrder
@@ -370,6 +390,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5034187942933498186, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675515656170529610, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
