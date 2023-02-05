@@ -287,7 +287,8 @@ MonoBehaviour:
   fallback_direction: {x: 0, y: 0, z: 0}
   fallback_force: 3
   attack_time: 0.5
-  explotion_prefab: {fileID: 0}
+  explotion_prefab: {fileID: 1583176076175549028, guid: c0e4b4d3360ab3341a8afbb1374fb765,
+    type: 3}
 --- !u!114 &8029995165221366220
 MonoBehaviour:
   m_ObjectHideFlags: 0

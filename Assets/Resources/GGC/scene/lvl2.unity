@@ -9933,6 +9933,12 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 449790665}
     m_Modifications:
+    - target: {fileID: 2894867027192618278, guid: 0dbe94d6daaca754da545774719cd887,
+        type: 3}
+      propertyPath: explotion_prefab
+      value: 
+      objectReference: {fileID: 1583176076175549028, guid: dcea111b0d2288f43b77ae75c71d8d8b,
+        type: 3}
     - target: {fileID: 3499229840829048357, guid: 0dbe94d6daaca754da545774719cd887,
         type: 3}
       propertyPath: m_Name
