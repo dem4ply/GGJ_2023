@@ -94,6 +94,8 @@ MonoBehaviour:
   is_block: 0
   npc: {fileID: 4436110919812293675}
   waypoint_patrol: {fileID: 0}
+  attack_distance: 10
+  player_global: {fileID: 0}
 --- !u!1 &6013289634663433860
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug_mode: 0
   pool: {fileID: 0}
-  sheet: {fileID: 0}
+  sheet: {fileID: 11400000, guid: 23e8548559738e349a1a289b327eb8da, type: 2}
   start_buffos: []
   hp:
     use_constant: 1
