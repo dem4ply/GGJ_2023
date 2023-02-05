@@ -6,7 +6,7 @@ using chibi.pomodoro;
 
 namespace chibi.motor.weapons.gun.bullet
 {
-	public class Bullet_motor : Motor_physical
+	public class Bullet_motor : Motor
 	{
 		public Ammo ammo;
 		public float life_span;
@@ -24,6 +24,7 @@ namespace chibi.motor.weapons.gun.bullet
 		{
 			base._init_cache();
 			prepare_life_span();
+			gravity = 0f;
 		}
 
 		protected virtual void prepare_life_span()
