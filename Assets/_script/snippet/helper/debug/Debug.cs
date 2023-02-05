@@ -25,7 +25,7 @@ namespace helper
 			public Debug( chibi.Chibi_behaviour instance )
 			{
 				_instance = instance;
-				draw = new draw.Draw( _instance );
+				//draw = new draw.Draw( _instance );
 			}
 
 			public void info( object msg )
@@ -36,9 +36,6 @@ namespace helper
 			public void info( string msg, params object[] list )
 			{
 				msg = string.Format( msg, list );
-				UnityEngine.Debug.Log( string.Format(
-					"[{0}]{{{1}}} {2}", type_name, full_name, msg ),
-					_instance.gameObject );
 			}
 
 			public void log( object msg )
@@ -59,9 +56,6 @@ namespace helper
 			public void warning( string msg, params object[] list )
 			{
 				msg = string.Format( msg, list );
-				UnityEngine.Debug.LogWarning( string.Format(
-					"[{0}]{{{1}}} {2}", type_name, full_name, msg ),
-					_instance.gameObject );
 			}
 
 			public void error( object msg )
@@ -72,9 +66,6 @@ namespace helper
 			public void error( string msg, params object[] list )
 			{
 				msg = string.Format( msg, list );
-				UnityEngine.Debug.LogError( string.Format(
-					"[{0}]{{{1}}} {2}", type_name, full_name, msg ),
-					_instance.gameObject );
 			}
 
 			public void pause()
@@ -84,12 +75,12 @@ namespace helper
 
 			protected string full_name
 			{
-				get { return helper.game_object.name.full( _instance ); }
+				get { return "prod full name"; }
 			}
 
 			protected string type_name
 			{
-				get { return _instance.GetType().Name; }
+				get { return "prod type name"; }
 			}
 		}
 	}
