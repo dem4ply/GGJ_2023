@@ -15,6 +15,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3635198279223913305, guid: 929559eaf876c5c41953e7999d9b8379,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635198279223913305, guid: 929559eaf876c5c41953e7999d9b8379,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635198279223913305, guid: 929559eaf876c5c41953e7999d9b8379,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635198279223913305, guid: 929559eaf876c5c41953e7999d9b8379,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -94,12 +109,12 @@ PrefabInstance:
     - target: {fileID: 616944216335751710, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.95811445
+      value: 1.8626
       objectReference: {fileID: 0}
     - target: {fileID: 616944216335751710, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.98437494
+      value: 1.9151562
       objectReference: {fileID: 0}
     - target: {fileID: 2355990116895695983, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
@@ -109,17 +124,17 @@ PrefabInstance:
     - target: {fileID: 3960240717871135183, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.5126
+      value: 8.7757
       objectReference: {fileID: 0}
     - target: {fileID: 3960240717871135183, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.87499
+      value: 1.6625
       objectReference: {fileID: 0}
     - target: {fileID: 3960240717871135183, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.47
+      value: 0.434
       objectReference: {fileID: 0}
     - target: {fileID: 6013289635738877088, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
@@ -184,7 +199,7 @@ PrefabInstance:
     - target: {fileID: 6013289635738877101, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
       propertyPath: m_Name
-      value: enemy follow waypoints 2
+      value: enemy follow waypointsboss
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6013289635738877103, guid: d3d630510af3e54409fa948bd58ee88e, type: 3}
