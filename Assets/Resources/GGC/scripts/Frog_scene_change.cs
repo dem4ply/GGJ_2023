@@ -12,7 +12,8 @@ namespace GGC.scene
 		public int scene_index;
 		private void OnTriggerEnter( Collider other )
 		{
-			SceneManager.LoadScene( scene_index );
+			if ( other.tag == helper.consts.tags.player )
+				SceneManager.LoadScene( scene_index );
 		}
 	}
 }
