@@ -239,12 +239,12 @@ MonoBehaviour:
   manager_collision: {fileID: 5631145329521458157}
   animator: {fileID: 5631145329521458147}
   max_slope_anlge: 45
-  _max_jump_heigh: 6
+  _max_jump_heigh: 4
   _min_jump_heigh: 1
   _wall_climp_jump_heigh: 3
   _jump_time: 0.6
   _falling_time: 0.5
-  _gravity_when_fall: -48
+  _gravity_when_fall: -32
   _jump_time_wall_climp: 0.4
   climp_wall_jump_ignore_input: 1
   wall_jump_off_ignore_input: 1
