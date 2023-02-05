@@ -232,23 +232,23 @@ MonoBehaviour:
   debug_mode: 0
   pool: {fileID: 0}
   current_speed: {x: 0, y: 0, z: 0}
-  max_speed: 4
+  max_speed: 10
   is_steering: 0
   steering_mass: 1
   velocity_acceleration: {x: 0, y: 0, z: 0}
   manager_collision: {fileID: 5631145329521458157}
   animator: {fileID: 5631145329521458147}
   max_slope_anlge: 45
-  _max_jump_heigh: 4
+  _max_jump_heigh: 6
   _min_jump_heigh: 1
   _wall_climp_jump_heigh: 3
-  _jump_time: 0.4
-  _falling_time: 0.4
-  _gravity_when_fall: -10
+  _jump_time: 0.6
+  _falling_time: 0.5
+  _gravity_when_fall: -48
   _jump_time_wall_climp: 0.4
   climp_wall_jump_ignore_input: 1
   wall_jump_off_ignore_input: 1
-  grabity_after_wall_jump_climp: -10
+  grabity_after_wall_jump_climp: -37.5
   slope_gravity: -10
   multiplier_velocity_wall_slice: 0.8
   multiplier_velocity_climp_jump: 0.8
@@ -311,11 +311,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: froggy
       objectReference: {fileID: 0}
+    - target: {fileID: 1791635596790418603, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791635596790418603, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791635596790418603, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3522044623162307290, guid: b5527e2221c9f41498e8200fea97c027,
         type: 3}
       propertyPath: owner
       value: 
       objectReference: {fileID: 4837309434160766087}
+    - target: {fileID: 3522044623162307290, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: debug_mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3983630890646107512, guid: b5527e2221c9f41498e8200fea97c027,
         type: 3}
       propertyPath: m_RootOrder
@@ -370,6 +390,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5034187942933498186, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675515656170529610, guid: b5527e2221c9f41498e8200fea97c027,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

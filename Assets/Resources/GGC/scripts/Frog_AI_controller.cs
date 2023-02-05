@@ -21,6 +21,9 @@ namespace GGC.controller.player
 		public Transform waypoint_patrol;
 
 		protected chibi.controller.steering.Steering steering;
+		public float attack_distance = 10f;
+
+		public GameObject player_global;
 
 		protected override void _init_cache()
 		{
@@ -30,8 +33,27 @@ namespace GGC.controller.player
 			get_sterring();
 		}
 
+		private void Update()
+		{
+			if ( !npc )
+				return;
+			if ( player_global )
+			{
+				debug.draw.arrow_to( player_global.transform.position, Color.black );
+				float distance = Vector3.Distance( player_global.transform.position, npc.transform.position );
+				if ( distance <= attack_distance )
+				{
+					debug.draw.arrow_to( player_global.transform.position, Color.red );
+					motor.Frog_motor motor = (motor.Frog_motor)npc.motor;
+					motor.on_attack();
+				}
+			}
+		}
+
 		protected void get_sterring()
 		{
+			if ( !npc )
+				return;
 			steering = npc.GetComponent<Steering>();
 			if ( !steering )
 				steering = npc.gameObject.AddComponent<Steering>();
@@ -39,6 +61,8 @@ namespace GGC.controller.player
 
 		protected void set_follow_waypoint()
 		{
+			if ( !npc )
+				return;
 			steering.target = waypoint_patrol;
 			steering.controller = npc;
 			var behavior = Follow_waypoints_child_transforms.CreateInstance<Follow_waypoints_child_transforms>();
@@ -50,6 +74,8 @@ namespace GGC.controller.player
 
 		protected void set_seek_player( Transform player )
 		{
+			if ( !npc )
+				return;
 			steering.target = player;
 			steering.controller = npc;
 			var behavior = Seek.CreateInstance<Seek>();
@@ -60,33 +86,45 @@ namespace GGC.controller.player
 
 		private void OnTriggerEnter( Collider other )
 		{
+			if ( !npc )
+				return;
 			if ( other.tag == helper.consts.tags.player )
 			{
 				set_seek_player( other.gameObject.transform );
+				player_global = other.gameObject;
 			}
 		}
 
 		private void OnTriggerExit( Collider other )
 		{
+			if ( !npc )
+				return;
 			if ( other.tag == helper.consts.tags.player )
 			{
 				set_follow_waypoint();
+				player_global = null;
 			}
 		}
 
 		private void OnCollisionEnter( Collision collision )
 		{
+			if ( !npc )
+				return;
 			if ( collision.gameObject.tag == helper.consts.tags.player )
 			{
 				set_seek_player( collision.transform );
+				player_global = collision.gameObject;
 			}
 		}
 
 		private void OnCollisionExit( Collision collision )
 		{
+			if ( !npc )
+				return;
 			if ( collision.gameObject.tag == helper.consts.tags.player )
 			{
 				set_follow_waypoint();
+				player_global = null;
 			}
 		}
 	}

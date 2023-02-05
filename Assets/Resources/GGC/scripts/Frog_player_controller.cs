@@ -107,7 +107,6 @@ namespace GGC.controller.player
 					switch ( e )
 					{
 						case chibi.joystick.events.down:
-							debug.log( "atacar" );
 							motor.Frog_motor motor = (motor.Frog_motor)player.motor;
 							motor.on_attack();
 							break;

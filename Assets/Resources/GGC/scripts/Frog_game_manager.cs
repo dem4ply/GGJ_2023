@@ -15,6 +15,7 @@ namespace GGC.game_manager
 		public chibi.joystick.Joystick joystick;
 		public GGC.controller.player.Frog_player_controller player_controller;
 		public CinemachineVirtualCamera main_camera;
+		public GameObject hat;
 
 		[ Header( "player" ) ]
 		public int lives;
@@ -63,6 +64,9 @@ namespace GGC.game_manager
 		{
 			var new_player = helper.instantiate._(
 				player_prefab, start_point.position );
+
+			if ( hat )
+				helper.instantiate._( hat, start_point.position );
 
 			player_reference.Value = new_player;
 			add_respawn_events();
