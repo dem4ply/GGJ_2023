@@ -8,7 +8,7 @@ using chibi.controller.steering.behavior;
 
 namespace GGC.controller.player
 {
-	enum ai_state
+	public enum ai_state
 	{
 		idle,
 		seek,
@@ -24,6 +24,7 @@ namespace GGC.controller.player
 		public float attack_distance = 10f;
 
 		public GameObject player_global;
+		public ai_state status;
 
 		protected override void _init_cache()
 		{
@@ -44,10 +45,12 @@ namespace GGC.controller.player
 				if ( distance <= attack_distance )
 				{
 					debug.draw.arrow_to( player_global.transform.position, Color.red );
-					motor.Frog_motor motor = (motor.Frog_motor)npc.motor;
+					motor.Frog_motor motor = ( motor.Frog_motor )npc.motor;
 					motor.on_attack();
 				}
 			}
+			if ( player_global == null && status == ai_state.seek )
+				set_follow_waypoint();
 		}
 
 		protected void get_sterring()
@@ -70,6 +73,7 @@ namespace GGC.controller.player
 			steering.behaviors.Clear();
 			steering.behaviors.Add( behavior );
 			steering.reload();
+			this.status = ai_state.patrol;
 		}
 
 		protected void set_seek_player( Transform player )
@@ -82,6 +86,7 @@ namespace GGC.controller.player
 			steering.behaviors.Clear();
 			steering.behaviors.Add( behavior );
 			steering.reload();
+			this.status = ai_state.seek;
 		}
 
 		private void OnTriggerEnter( Collider other )
