@@ -40,6 +40,8 @@ namespace chibi.controller.steering
 		public virtual void reload()
 		{
 			reload_behaviors();
+			if ( !controller )
+				return;
 			if ( start_speed == -1f )
 				controller.speed = controller.max_speed;
 			else
@@ -78,7 +80,8 @@ namespace chibi.controller.steering
 				desire_direction += behavior_direction;
 			}
 			debug.draw.arrow( desire_direction, Color.black );
-			controller.desire_direction = desire_direction;
+			if ( controller )
+				controller.desire_direction = desire_direction;
 			//controller.speed = controller.max_speed * desire_speed;
 		}
 	}
