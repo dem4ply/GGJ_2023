@@ -35,6 +35,8 @@ namespace GGC.controller.player
 
 		private void Update()
 		{
+			if ( !npc )
+				return;
 			if ( player_global )
 			{
 				debug.draw.arrow_to( player_global.transform.position, Color.black );

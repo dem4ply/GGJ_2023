@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 4462692045159336860}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &4935426760541585041
 BoxCollider:
@@ -64,6 +64,7 @@ MonoBehaviour:
   pool: {fileID: 0}
   is_block: 0
   layer: 1
+  prefab: {fileID: 1583176076175549028}
 --- !u!54 &437260260
 Rigidbody:
   m_ObjectHideFlags: 0
