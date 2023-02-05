@@ -25,7 +25,7 @@ namespace helper
 			public Debug( chibi.Chibi_behaviour instance )
 			{
 				_instance = instance;
-				//draw = new draw.Draw( _instance );
+				draw = new draw.Draw( _instance );
 			}
 
 			public void info( object msg )
@@ -70,7 +70,7 @@ namespace helper
 
 			public void pause()
 			{
-				UnityEngine.Debug.Break();
+				//UnityEngine.Debug.Break();
 			}
 
 			protected string full_name
