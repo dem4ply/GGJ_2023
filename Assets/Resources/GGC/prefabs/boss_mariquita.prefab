@@ -184,6 +184,11 @@ PrefabInstance:
       propertyPath: debug_mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1328558228578934374, guid: 3d029d538d4a72841abf4c78349ea3d2,
+        type: 3}
+      propertyPath: burst_bullet_option.enable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1328558228578934375, guid: 3d029d538d4a72841abf4c78349ea3d2,
         type: 3}
       propertyPath: m_Name
@@ -264,7 +269,7 @@ PrefabInstance:
     - target: {fileID: 6013289635738877089, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6013289635738877089, guid: d3d630510af3e54409fa948bd58ee88e,
         type: 3}

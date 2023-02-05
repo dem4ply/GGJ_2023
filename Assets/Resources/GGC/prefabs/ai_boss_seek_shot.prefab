@@ -115,7 +115,7 @@ MonoBehaviour:
   is_block: 0
   npc: {fileID: 0}
   attack_time:
-    frecuency: 3
+    frecuency: 0.5
     is_enable: 1
     _sigma_frecuency: 0
   gun: {fileID: 0}

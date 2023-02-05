@@ -105,9 +105,9 @@ MonoBehaviour:
   velocity_acceleration: {x: 0, y: 0, z: 0}
   manager_collision: {fileID: 0}
   ammo: {fileID: 11400000, guid: f86e1a641122bfb4c934487af35b4014, type: 2}
-  life_span: 10
+  life_span: 13
   alway_rotate_to_velocity_direction: 1
-  time_to_disable: 10
+  time_to_disable: 13
   index_step: 0
   steps: []
 --- !u!114 &8373685103701220230

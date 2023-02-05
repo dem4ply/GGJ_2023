@@ -49,6 +49,8 @@ MonoBehaviour:
   pool: {fileID: 0}
   joystick: {fileID: 0}
   player_controller: {fileID: 2308699679890539102}
+  main_camera: {fileID: 0}
+  hat: {fileID: 0}
   lives: 3
   player_reference:
     use_constant: 1
@@ -57,7 +59,7 @@ MonoBehaviour:
   player_prefab: {fileID: 5631145329521458158, guid: b0d60f61394a48743a292a9286eaf9e1,
     type: 3}
   start_point: {fileID: 0}
-  respawn_time: 3
+  respawn_time: 1.5
 --- !u!1001 &2839099101124213345
 PrefabInstance:
   m_ObjectHideFlags: 0
